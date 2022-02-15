@@ -6,7 +6,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.englishcaard.App;
 import com.example.englishcaard.base.BaseFragment;
@@ -34,30 +33,35 @@ public class WordsFragment extends BaseFragment<FragmentWordsBinding> {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         adapterWords = new AdapterWords();
-        getImages();
+        initListeners();
 
     }
 
-
-    private void getImages() {
-        String text = binding.fffff.getText().toString();
-        App.retrofitClient.providePixabayApi().getImages("25680573-99ab4b0392ec7236ffaa0c266", text).enqueue(new Callback<PixabayResponse>() {
+    private void initListeners() {
+        binding.btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onResponse(Call<PixabayResponse> call, Response<PixabayResponse> response) {
-                adapterWords.setList((ArrayList<Hits>) response.body().getHits());
-                binding.recyclerWords.setAdapter(adapterWords);
+            public void onClick(View view) {
+                String text = binding.fffff.getText().toString();
+                App.retrofitClient.providePixabayApi().getImages("25680573-99ab4b0392ec7236ffaa0c266", text).enqueue(new Callback<PixabayResponse>() {
+                    @Override
+                    public void onResponse(Call<PixabayResponse> call, Response<PixabayResponse> response) {
+                        adapterWords.setList((ArrayList<Hits>) response.body().getHits());
+                        binding.recyclerWords.setAdapter(adapterWords);
 
 
-            }
+                    }
 
-            @Override
-            public void onFailure(Call<PixabayResponse> call, Throwable t) {
-                Toast.makeText(getContext(), "nope", Toast.LENGTH_SHORT).show();
+                    @Override
+                    public void onFailure(Call<PixabayResponse> call, Throwable t) {
+                        Toast.makeText(getContext(), "nope", Toast.LENGTH_SHORT).show();
 
+                    }
+                });
             }
         });
-
     }
+
+
 
 
 }
