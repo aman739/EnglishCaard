@@ -10,9 +10,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewbinding.ViewBinding;
 
-public abstract class BaseFragment <VB extends ViewBinding>extends Fragment {
-     public  VB binding;
-   public abstract VB bind();
+public abstract class BaseFragment<VB extends ViewBinding> extends Fragment {
+    public VB binding;
+
+    public abstract VB bind();
 
     @Nullable
     @Override

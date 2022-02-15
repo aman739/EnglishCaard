@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/EnglishCaard/app/src/main/res/drawable/backround_spalshscreen.xml" value="0.240625" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/EnglishCaard/app/src/main/res/drawable/item_words.xml" value="0.240625" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/EnglishCaard/app/src/main/res/drawable/splashscreen.xml" value="0.240625" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/EnglishCaard/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/EnglishCaard/app/src/main/res/layout/activity_splash_screen.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/EnglishCaard/app/src/main/res/layout/fragment_category.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/EnglishCaard/app/src/main/res/layout/fragment_words.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/EnglishCaard/app/src/main/res/layout/item_words.xml" value="0.22447916666666667" />
       </map>
     </option>
   </component>

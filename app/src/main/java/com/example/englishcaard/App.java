@@ -7,8 +7,9 @@ import com.example.englishcaard.network.RetrofitClient;
 
 
 public class App extends Application {
-   public static RetrofitClient retrofitClient;
-    PixabayApi api;
+    public static RetrofitClient retrofitClient;
+    public static PixabayApi api;
+
     @Override
     public void onCreate() {
         super.onCreate();

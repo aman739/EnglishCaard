@@ -8,6 +8,6 @@ import retrofit2.http.Query;
 
 public interface PixabayApi {
     @GET("/api")
-    Call<PixabayResponse> getImages (@Query("key")String key,@Query("q")String englishWord);
+    Call<PixabayResponse> getImages(@Query("key") String key, @Query("q") String keyWord);
 
 }

@@ -1,8 +1,11 @@
 package com.example.englishcaard.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.englishcaard.R;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
